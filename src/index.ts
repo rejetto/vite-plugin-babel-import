@@ -133,7 +133,7 @@ function transformSrcCode(
                 types.importDeclaration(
                   [
                     types.importDefaultSpecifier(
-                      types.identifier(importedName)
+                      types.identifier((spec as Specifier).local.name)
                     ),
                   ],
                   types.stringLiteral(libPath)
